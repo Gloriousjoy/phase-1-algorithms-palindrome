@@ -1,7 +1,14 @@
 function isPalindrome(word) {
   // Write your algorithm here
-}
-
+    let le = word.length;
+    if (le === 0 || le === 1) {
+      return true;
+    }
+    if (word[0] === word[le - 1]) {
+      return isPalindrome(word.slice(1, le - 1) );
+    }  
+    return false;
+  };
 /* 
   Add your pseudocode here
 */
